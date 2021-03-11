@@ -3,7 +3,7 @@ define mylaser ranger
   sensor
   (
     # just for demonstration purposes
-    range [0.1 25] # minimum and maximum range
+    range [0.1 21.0] # minimum and maximum range
     fov 360.0 # field of view
     samples 1920 # number of samples
   )

@@ -53,7 +53,13 @@ def move_object():
   	vel_y = rospy.get_param("vel_y")
   else:
   	vel_y = random.uniform(vel_min, vel_max)
+  	
+  vel_x = 0
+  if rospy.has_param("vel_x"):
+    vel_x = rospy.get_param("vel_x")
+    
   Twist_msg.linear.y = float(random.choice(['-1', '1'])) * vel_y
+  Twist_msg.linear.x = -vel_x
 
   # publish movement command continuously
   while not rospy.is_shutdown():
